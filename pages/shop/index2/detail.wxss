@@ -53,15 +53,15 @@
 .canui-shop-synopsis{
     padding:0 30rpx;
     color: #f1f1f1;
-    margin-top: 20px;
 }
 
 .canui-xzwz{
   display: -webkit-box;
+  font-size: 1.1em;
   line-height: 40rpx;
   word-break: break-all;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -111,21 +111,8 @@
 }
 
 /*-------菜单导航栏-------*/
-.canui-shop-table{
-    padding:15rpx 15rpx;
-}
-.nav .cu-item {
-    height:60rpx;
-    line-height:60rpx;
-    margin:0 10rpx;
-    padding:0 30rpx;
-    color: #f1f1f1;
-}
-.nav .cu-item.cur{
-    border-bottom:0;
-    background:rgba(241,241,241,0.3);
-    border-radius:55px;
-    color: rgba(254,0,0,0.8);
+.canui-shop-nav{
+  font-size: 1.5em;
 }
 
 /*-------商品列表-------*/

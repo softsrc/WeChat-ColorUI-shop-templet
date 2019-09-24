@@ -1,12 +1,12 @@
 <view class='UCenter-bg'>
-    <image src='/img/logo.png' class='png' mode='widthFix'></image>
-    <view class='text-xl'> 仔仔 </view>
-    <view class='margin-top-sm'>
-        <text>普通会员</text>
-    </view>
-    <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  <image src='/theme/img/logo.png' class='png' mode='widthFix'></image>
+  <view class='text-xl'> 仔仔 </view>
+  <view class='margin-top-sm'>
+    <text>普通会员</text>
+  </view>
 </view>
-<view class='padding flex text-center text-grey bg-white shadow-warp'>
+
+<!-- <view class='padding flex text-center text-grey bg-white shadow-warp'>
     <view class='flex flex-sub flex-direction solid-right'>
         <view class="text-xxl text-orange">{{visitTotal}}</view>
         <view class="margin-top-sm">
@@ -22,36 +22,117 @@
         <view class="margin-top-sm">
             <text class='icon-sponsor'></text> 保证金</view>
     </view>
+</view> -->
+<view class='padding flex text-center bg-white shadow-warp'>
+  <view class='flex flex-sub flex-direction solid-right'>
+    <view class="text-xxl text-orange">{{visitTotal}}</view>
+    <view class="margin-top-sm">
+      <text class='icon-recharge'></text> 积分</view>
+  </view>
+  <view class='flex flex-sub flex-direction solid-right'>
+    <view class="text-xxl text-blue">{{starCount}}</view>
+    <view class="margin-top-sm">
+      <text class='icon-moneybag'></text> 收益</view>
+  </view>
+  <view class='flex flex-sub flex-direction'>
+    <view class="text-xxl text-green">{{forksCount}}</view>
+    <view class="margin-top-sm">
+      <text class='icon-sponsor'></text> 保证金</view>
+  </view>
 </view>
-<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
-    <view class="cu-item arrow">
-        <navigator class='content' open-type="navigate" hover-class='none' url="/pages/order/index/index">
-            <text class='icon-send text-cyan'></text>
-            <text class='text-grey'>我的订单</text>
-        </navigator>
-    </view>
-    <view class="cu-item arrow">
-        <navigator class='content' open-type="navigate" hover-class='none' url="/pages/vipcard/index/index">
-            <text class='icon-vipcard text-green'></text>
-            <text class='text-grey'>会员卡</text>
-        </navigator>
-    </view>
-    <view class="cu-item arrow">
-        <navigator class='content' open-type="navigate" hover-class='none' url="/pages/coupon/index/index">
-            <text class='icon-ticket text-red'></text>
-            <text class='text-grey'>优惠券</text>
-        </navigator>
-    </view>
-    <view class="cu-item arrow">
-        <navigator class='content' open-type="navigate" hover-class='none' url="/pages/user/address/index">
-            <text class='icon-location text-orange'></text>
-            <text class='text-grey'>地址管理</text>
-        </navigator>
-    </view>
-    <view class="cu-item arrow">
-        <button class='cu-btn content' open-type='feedback'>
-            <text class='icon-writefill text-grey'></text>
-            <text class='text-grey'>意见反馈</text>
-        </button>
-    </view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 我的订单
+  </view>
+  <view class="action">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view> 全部订单
+        <text class='icon-right'></text> </view>
+    </navigator>
+  </view>
+</view>
+<view class="uc-order cu-list grid col-5 no-border">
+
+  <view class="cu-item">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view class="order-icon lg text-gray">
+        <image mode="aspectFit" src="/theme/order/state_new.png" role="img"></image>
+        <view class="cu-tag badge">
+          <block>99</block>
+        </view>
+      </view>
+      <text>待付款</text>
+    </navigator>
+  </view>
+
+  <view class="cu-item">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view class="order-icon lg text-gray">
+        <image mode="aspectFit" src="/theme/order/state_pay.png" role="img"></image>
+        <view class="cu-tag badge">
+          <block>99</block>
+        </view>
+      </view>
+      <text>待收货</text>
+    </navigator>
+  </view>
+  <view class="cu-item">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view class="order-icon lg text-gray">
+        <image mode="aspectFit" src="/theme/order/state_send.png" role="img"></image>
+        <view class="cu-tag badge">
+          <block>99</block>
+        </view>
+      </view>
+      <text>已完成</text>
+    </navigator>
+  </view>
+  <view class="cu-item">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view class="order-icon lg text-gray">
+        <image mode="aspectFit" src="/theme/order/state_unevaluate.png" role="img"></image>
+        <view class="cu-tag badge">
+          <block>99</block>
+        </view>
+      </view>
+      <text>待评价</text>
+    </navigator>
+  </view>
+  <view class="cu-item">
+    <navigator hover-class='none' url="/pages/order/index/index">
+      <view class="order-icon lg text-gray">
+        <image mode="aspectFit" src="/theme/order/state_refund.png" role="img"></image>
+        <view class="cu-tag badge">
+          <block>99</block>
+        </view>
+      </view>
+      <text>退款售后</text>
+    </navigator>
+  </view>
+</view>
+<view class="cu-list menu margin-top-xl margin-bottom-xl shadow-lg">
+  <view class="cu-item arrow">
+    <navigator class='content' open-type="navigate" hover-class='none' url="/pages/vipcard/index/index">
+      <text class='icon-vipcard text-green'></text>
+      <text class='text-grey'>会员卡</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' open-type="navigate" hover-class='none' url="/pages/coupon/index/index">
+      <text class='icon-ticket text-red'></text>
+      <text class='text-grey'>优惠券</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' open-type="navigate" hover-class='none' url="/pages/user/address/index">
+      <text class='icon-location text-orange'></text>
+      <text class='text-grey'>地址管理</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <button class='cu-btn content' open-type='feedback'>
+      <text class='icon-writefill text-grey'></text>
+      <text class='text-grey'>意见反馈</text>
+    </button>
+  </view>
 </view>

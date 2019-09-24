@@ -74,7 +74,7 @@
                             <view class='content flex-sub'>
                                 <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    十天前
+                                    十天前 1
                                 </view>
                             </view>
                         </view>
@@ -95,7 +95,7 @@
                             <view class='content flex-sub'>
                                 <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    十天前
+                                    十天前 2
                                 </view>
                             </view>
                         </view>
@@ -116,7 +116,7 @@
                             <view class='content flex-sub'>
                                 <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    十天前
+                                    十天前 3
                                 </view>
                             </view>
                         </view>
@@ -126,7 +126,7 @@
             </view>
         </navigator>
 
-        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index/index" class="nav-li canui-yx-url">
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index2/detail" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
                 <view class="cu-item shadow">
                     <view class='image'>
@@ -137,7 +137,7 @@
                             <view class='content flex-sub'>
                                 <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    十天前
+                                    十天前 4
                                 </view>
                             </view>
                         </view>

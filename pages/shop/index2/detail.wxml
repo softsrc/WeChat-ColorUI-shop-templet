@@ -7,34 +7,30 @@
     <view class='canui-shop-title' bindtap='btnback'>
         <text class="icon-back"></text> <txet>XXXX旗舰店</txet>
     </view>
-    <view class="canui-shop-synopsis text-sm">
+    <view style="display:flex;padding:10px;">
+      <view style="flex:1;">
+        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="aspectFill" style="width:100px;height:100px;border-radius: 5px;"></image>
+      </view>
+      <view class="canui-shop-synopsis text-sm" style="flex:4;">
         <text class="canui-xzwz">店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介店铺简介</text>
+      </view>
     </view>
-</view>
-
-<!--关注按钮-->
-<view class="canui-head-box" style="top:{{StatusBar}}px;">
-    <navigator open-type="navigate" hover-class='none' url="/pages/shop/index/details">
-        <text class="icon-vipcard"></text> 详情
-    </navigator>
-</view>
-
-<!--搜索框-->
-<view class="cu-bar search" style="margin-top:{{StatusBar}}px;">
-    <view class='search-form round'>
-        <text class="icon-search"></text>
-        <input type="text" placeholder="搜索店铺内的商品" confirm-type="search" placeholder-class="canui-input-placeholder"></input>
-    </view>
-    <view class='action'>
-        <button class='cu-btn shadow-blur round canui-btn-wxjn' bindtap="search">搜索</button>
-    </view>
+    
 </view>
 
 <!--菜单导航栏-->
-<scroll-view scroll-x class="nav text-left canui-shop-table">
-    <view wx:for="{{SortMenu}}" wx:key class="cu-item {{item.id==TabCur?'cur':''}}" bindtap='tabSelect' data-id="{{item.id}}">
-        {{item.name}}
+<scroll-view scroll-x class="bg-white nav text-center canui-shop-nav" style="margin-top:{{StatusBar}}px;">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="1">
+      商品
     </view>
+    <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}}"  bindtap="tabSelect" data-id="2">
+      评价
+    </view>
+    <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="3">
+      商家
+    </view>
+  </view>
 </scroll-view>
 
 <!--商品列表-->

@@ -14,7 +14,7 @@
     border-radius: 12rpx;
     width: 45%;
     margin: 0 2.5% 40rpx;
-    background-image: url(https://yhtx.itianc.com/static/images/cardBg.png);
+    background-image: url(https://image.weilanwl.com/img/4x3-1.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
