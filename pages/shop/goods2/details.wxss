@@ -43,3 +43,19 @@
 .cu-bar.tabbar .action [class*="icon"] {
     width:38rpx;
 }
+
+.coupons{
+  margin-top: 25rpx;
+}
+.coupons .type {
+  padding: 10rpx 15rpx;
+  background-color: red;
+  color: #fff;
+  margin-right: 15rpx;
+}
+
+.coupons .content {
+  border: 1px grey solid;
+  padding: 9rpx;
+  margin-right: 15rpx;
+}

@@ -121,7 +121,7 @@
 </view>
 
 <!-- 人气 -->
-<view class="cu-bar bg-white margin-top solid-bottom">
+<view class="cu-bar bg-white margin-top solid-bottom" wx:if="{{subjectList}}">
     <view class='action'>
         <text class='icon-title text-green'></text>
         <text>人气推荐</text>
@@ -130,7 +130,7 @@
         <view class='action' style="font-size: 27rpx;"> 更多 <view class='icon-right'></view> </view>
     </navigator>
 </view>
-<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
+<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;" wx:if="{{hotProductList}}">
     <view class='nav-list canui-flex-car'>
         <navigator  wx:for="{{hotProductList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
@@ -156,7 +156,7 @@
 </view>
 
 <!-- 专题精选 -->
-<view class="cu-bar bg-white margin-top solid-bottom">
+<view class="cu-bar bg-white margin-top solid-bottom" wx:if="{{subjectList}}">
     <view class='action'>
         <text class='icon-title text-green'></text>
         <text>专题精选</text>
@@ -165,7 +165,7 @@
         <view class='action' style="font-size: 27rpx;"> 更多 <view class='icon-right'></view> </view>
     </navigator>
 </view>
-<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
+<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;" wx:if="{{subjectList}}">
     <view class='nav-list canui-flex-car'>
         <navigator  wx:for="{{subjectList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li" style="width:100%;">
             <view class="flex-sub cu-card case shadow-warp bg-white">

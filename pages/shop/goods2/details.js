@@ -9,8 +9,19 @@ Page({
             'https://image.weilanwl.com/img/4x3-3.jpg',
             'https://image.weilanwl.com/img/4x3-4.jpg',
         ],
+        modalAttrShow:false
     },
     onLoad: function (options) {
         let that = this;
-    }
+    },
+  showAttrModal(e){
+    this.setData({
+      modalAttrShow: true
+    })
+  },
+  hideAttrModal(e){
+    this.setData({
+      modalAttrShow: false
+    })
+  }
 });
