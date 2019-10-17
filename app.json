@@ -4,6 +4,7 @@
     "pages/scar/index/index",
     "pages/user/index/index",
     "pages/auth/auth",
+    "pages/shop/index3/verticalnav",
     "pages/shop/index2/detail"
   ],
   "window": {

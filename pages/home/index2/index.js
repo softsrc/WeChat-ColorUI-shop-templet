@@ -1,5 +1,3 @@
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module';
-import { api, request } from '../../../apis';
 const app = getApp();
 
 Page({
@@ -8,10 +6,6 @@ Page({
 		CustomBar: app.globalData.CustomBar,
 		hidden: true,
 		current: 0,lines: 0,
-    brandList:[], // 优选商家
-    hotProductList:[], // 人气商品
-    newProductList: [], // 上新商品
-    subjectList: [], // 专题
 		swiperlist: [{
 			id: 0,
 			url: 'https://image.weilanwl.com/img/4x3-1.jpg',
@@ -87,24 +81,7 @@ Page({
 		        }
 	        }
 	    });
-
-    this.initPage()
 	},
-  async initPage() {
-    const result = await request(api.page.portal, {})
-    console.log('init page result ',result)
-    this.setData({
-      swiperlist: result.data.advertiseList,
-      brandList: result.data.brandList,
-      hotProductList: result.data.hotProductList,
-      newProductList: result.data.newProductList,
-      subjectList: result.data.subjectList,
-
-    })
-    // wx.setNavigationBarTitle({
-    //   title: page.name
-    // })
-  },
 	swiperchange: function (e) {
 		this.setData({
 			current:e.detail.current

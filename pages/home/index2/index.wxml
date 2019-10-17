@@ -19,7 +19,7 @@
 <!--轮播区域-->
 <swiper class="screen-swiper square-dot shadow-warp bg-white" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="swiperchange">
     <swiper-item wx:for="{{swiperlist}}" wx:key="item.id">
-        <image src="{{item.pic}}" mode='aspectFill' bindtap="swipclick"></image>
+        <image src="{{item.url}}" mode='aspectFill' bindtap="swipclick"></image>
     </swiper-item>
 </swiper>
 
@@ -62,18 +62,18 @@
 </view>
 <view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
     <view class='nav-list canui-flex-car'>
-        <navigator  wx:for="{{brandList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li canui-yx-url">
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
                 <view class="cu-item shadow">
                     <view class='image'>
-                        <image src="{{item.logo}}" mode="widthFix"></image>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
                     </view>
                     <view class="cu-list menu menu-avatar">
                         <view class="cu-item">
                             <view class='content flex-sub'>
-                                <view class='text-grey'>{{item.name}}</view>
+                                <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    当前优惠
+                                    十天前 -1
                                 </view>
                             </view>
                         </view>
@@ -82,33 +82,19 @@
                 </view>
             </view>
         </navigator>
-    </view>
-</view>
 
-<!--上新-->
-<view class="cu-bar bg-white margin-top solid-bottom">
-    <view class='action'>
-        <text class='icon-title text-green'></text>
-        <text>上新</text>
-    </view>
-    <navigator hover-class='none' url="/pages/home/groom/index">
-        <view class='action' style="font-size: 27rpx;"> 更多 <view class='icon-right'></view> </view>
-    </navigator>
-</view>
-<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
-    <view class='nav-list canui-flex-car'>
-        <navigator  wx:for="{{newProductList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li canui-yx-url">
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index/index" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
                 <view class="cu-item shadow">
                     <view class='image'>
-                        <image src="{{item.pic}}" mode="widthFix"></image>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
                     </view>
                     <view class="cu-list menu menu-avatar">
                         <view class="cu-item">
                             <view class='content flex-sub'>
-                                <view class='text-grey'>{{item.name}}</view>
+                                <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    ￥{{item.price}}
+                                    十天前 0
                                 </view>
                             </view>
                         </view>
@@ -117,33 +103,19 @@
                 </view>
             </view>
         </navigator>
-    </view>
-</view>
 
-<!-- 人气 -->
-<view class="cu-bar bg-white margin-top solid-bottom">
-    <view class='action'>
-        <text class='icon-title text-green'></text>
-        <text>人气推荐</text>
-    </view>
-    <navigator hover-class='none' url="/pages/home/groom/index">
-        <view class='action' style="font-size: 27rpx;"> 更多 <view class='icon-right'></view> </view>
-    </navigator>
-</view>
-<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
-    <view class='nav-list canui-flex-car'>
-        <navigator  wx:for="{{hotProductList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li canui-yx-url">
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/goods/details" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
                 <view class="cu-item shadow">
                     <view class='image'>
-                        <image src="{{item.pic}}" mode="widthFix"></image>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
                     </view>
                     <view class="cu-list menu menu-avatar">
                         <view class="cu-item">
                             <view class='content flex-sub'>
-                                <view class='text-grey'>{{item.name}}</view>
+                                <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    ￥{{item.price}}
+                                    十天前 1
                                 </view>
                             </view>
                         </view>
@@ -152,40 +124,70 @@
                 </view>
             </view>
         </navigator>
-    </view>
-</view>
 
-<!-- 专题精选 -->
-<view class="cu-bar bg-white margin-top solid-bottom">
-    <view class='action'>
-        <text class='icon-title text-green'></text>
-        <text>专题精选</text>
-    </view>
-    <navigator hover-class='none' url="/pages/home/groom/index">
-        <view class='action' style="font-size: 27rpx;"> 更多 <view class='icon-right'></view> </view>
-    </navigator>
-</view>
-<view class="bg-white" style="padding:0 30rpx;padding-bottom: 20rpx;">
-    <view class='nav-list canui-flex-car'>
-        <navigator  wx:for="{{subjectList}}" wx:key="item.id" open-type="navigate" hover-class='none' url="/pages/shop/goods2/details" class="nav-li" style="width:100%;">
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index/index" class="nav-li canui-yx-url">
             <view class="flex-sub cu-card case shadow-warp bg-white">
                 <view class="cu-item shadow">
                     <view class='image'>
-                        <image src="{{item.pic}}" mode="widthFix"></image>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
                     </view>
                     <view class="cu-list menu menu-avatar">
                         <view class="cu-item">
                             <view class='content flex-sub'>
-                                <view class='text-grey'>{{item.title}}</view>
+                                <view class='text-grey'>猪皮蛋</view>
                                 <view class='text-gray text-sm flex justify-between'>
-                                    
+                                    十天前 2
                                 </view>
                             </view>
                         </view>
                     </view>
+                    <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
                 </view>
             </view>
         </navigator>
+
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index3/verticalnav" class="nav-li canui-yx-url">
+            <view class="flex-sub cu-card case shadow-warp bg-white">
+                <view class="cu-item shadow">
+                    <view class='image'>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
+                    </view>
+                    <view class="cu-list menu menu-avatar">
+                        <view class="cu-item">
+                            <view class='content flex-sub'>
+                                <view class='text-grey'>猪皮蛋</view>
+                                <view class='text-gray text-sm flex justify-between'>
+                                    十天前 3
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+                </view>
+            </view>
+        </navigator>
+
+        <navigator open-type="navigate" hover-class='none' url="/pages/shop/index2/detail" class="nav-li canui-yx-url">
+            <view class="flex-sub cu-card case shadow-warp bg-white">
+                <view class="cu-item shadow">
+                    <view class='image'>
+                        <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="widthFix"></image>
+                    </view>
+                    <view class="cu-list menu menu-avatar">
+                        <view class="cu-item">
+                            <view class='content flex-sub'>
+                                <view class='text-grey'>猪皮蛋</view>
+                                <view class='text-gray text-sm flex justify-between'>
+                                    十天前 4
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+                </view>
+            </view>
+        </navigator>
+
     </view>
 </view>
 
