@@ -112,15 +112,38 @@
 </view>
 
 <view class="cu-modal bottom-modal {{modalAttrShow?'show':''}}" bindtap="hideAttrModal">
-  <view class="cu-dialog">
-    <view class="bg-white">
-      <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
-      <view>
-        
+  <view class="cu-dialog" style="overflow: visible;" catchtap>
+    <view class="bg-white" style="display: flex;justify-content:space-between;">
+      <view style="display: flex;margin-left:10rpx;">
+        <view class="cu-avatar radius" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);width: 128rpx;height: 128rpx;position: relative;top: -42rpx;"></view>
+        <view style="display: flex;flex-direction: column;margin-left: 30rpx;padding: 10rpx;">
+          <text class="text-price text-red text-xl" >1000</text>
+          <text class="text-xl">请选择 颜色 尺寸</text>
+        </view>
       </view>
+      <text class="cuIcon-close lg text-gray" style="padding: 10rpx;margin: 10rpx;"></text>
     </view>
-    <view class="padding-xl">
-      Modal 内容。
+    <view style="padding:10rpx;">
+      <view class="flex">
+        <text>颜色</text>
+      </view>
+      <view class="padding-sm flex flex-wrap solid-bottom">
+        <view class="padding-xs" wx:for="{{tags}}" wx:key="index" bindtap="selectTag">
+          <view class="cu-tag bg-{{item.color}}">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="flex">
+        <text>尺码</text>
+      </view>
+      <view class="padding-sm flex flex-wrap ">
+        <view class="padding-xs" wx:for="{{tags}}" wx:key="index" bindtap="selectTag">
+          <view class="cu-tag bg-{{item.color}}">{{item.name}}</view>
+        </view>
+      </view>
+      
+    </view>
+    <view >
+      <button class='cu-btn bg-orange' style="width: 100%;border-radius: 0px;height: 72rpx;">确定</button>
     </view>
   </view>
 </view>
